@@ -1,0 +1,26 @@
+[
+{
+ "nome": "Eos V-Neck Hoodie",
+ "tamanho": "XL",
+ "cor":"Blue",
+ "quantidade": "1"
+},
+{
+  "nome": "Autumn Pullie",
+  "tamanho": "L",
+  "cor":"Red",
+  "quantidade": "2"
+ },
+ {
+  "nome": "Hera Pullover Hoodie",
+  "tamanho": "M",
+  "cor":"Green",
+  "quantidade": "1"
+ },
+ {
+  "nome": "Selene Yoga Hoodie",
+  "tamanho": "S",
+  "cor":"White",
+  "quantidade": "2"
+ }
+]
