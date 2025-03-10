@@ -16,7 +16,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     });
 
     afterEach(() => {
-        //cy.screenshot();
+        cy.screenshot();
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
