@@ -38,8 +38,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             cy.get('#password').type('teste@teste.com')
             cy.get('.woocommerce-button').click()
             cy.get('#terms').check();
-            cy.get('#place_order').click();
-            cy.wait(5000);
+            cy.get('#place_order', {timeout:5000}).click();
             cy.get('.woocommerce-notice').should('contain', 'Seu pedido foi recebido')
         })
 
