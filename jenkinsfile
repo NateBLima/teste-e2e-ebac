@@ -4,12 +4,12 @@ pipeline{
     stages{
         stage('clonar repositorio'){
             steps{
-               git branch: 'main', url: 'https://github.com/NateBLima/teste-e2e-ebac.git'
+               bat 'git branch: \'main\', url: \'https://github.com/NateBLima/teste-e2e-ebac.git\''
             }
         }
         stage('instalar dependencias'){
             steps{
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('executar testes'){
