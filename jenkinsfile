@@ -2,9 +2,14 @@ pipeline {
     agent any
 
     stages {
+        stage('clonar repositorio'){
+            steps {
+                 bat 'git clone https://github.com/NateBLima/teste.git'
+            }
+        }
           stage('Instalar dependências'){
             steps {
-                 bat 'npm install'
+                 sh 'npm install'
             }
         }
 
