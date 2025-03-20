@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('clonar repositorio'){
             steps {
-                 sh 'git clone https://github.com/NateBLima/teste-e2e-ebac.git'
+                 git branch 'main', url: 'https://github.com/NateBLima/teste-e2e-ebac.git'
             }
         }
         stage('instalar dependencias'){
             steps{
-                bat 'npm install'
+                sh 'npm install'
             }
         }
         stage('executar testes'){
             steps{
-               sh 'npx cypress run'
+               sh 'NO_COLOR=1 npm run cy:run'
             }
         }
     }
