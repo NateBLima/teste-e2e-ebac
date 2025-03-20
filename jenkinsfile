@@ -2,16 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('clonar repositorio'){
+        stage('Clonar Repositorio') {
             steps {
-                 bat 'git clone https://github.com/NateBLima/teste.git'
+                git branch: 'main', url: 'https://github.com/NateBLima/teste-e2e-ebac.git'
             }
         }
-          stage('Instalar dependências'){
+        stage('Instalar Dependencias') {
             steps {
-                 sh 'npm install'
+                sh 'npm install'
             }
         }
-
+        stage('Executar Testes') {
+            steps {
+                sh 'NO_COLOR=1 npm run cy:run'
+            }
+        }
     }
 }
