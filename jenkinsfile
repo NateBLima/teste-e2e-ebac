@@ -7,10 +7,14 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/NateBLima/teste-e2e-ebac.git'
             }
         }
-
+        stage('Instalar Dependencias') {
+            steps {
+                bat '\'npm install\''
+            }
+        }
         stage('Executar Testes') {
             steps {
-                sh 'NO_COLOR=1 npm run cy:run'
+                bat '\'NO_COLOR=1 npm run cy:run\''
             }
         }
     }
