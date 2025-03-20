@@ -9,8 +9,7 @@ pipeline{
         }
         stage('instalar dependencias'){
             steps{
-                echo 'compilando'
-  //              sh 'npm install'
+                sh 'npm install'
             }
         }
         stage('executar testes'){
